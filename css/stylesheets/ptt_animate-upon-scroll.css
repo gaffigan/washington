@@ -1,0 +1,587 @@
+/* 
+Animate Upon Scroll Coordinate
+tag: ptt_animate-upon-scroll
+*/
+/* ---------------------------------- +/
+MOBILE
+Less than 768px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MENU BAR
+04.SUB MENU BAR
+05.BOOKMARK GRID
+06.MOBILE MENU BAR
+07.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+/* [00.GLOBAL] */
+/* line 23, ../sass/ptt_animate-upon-scroll.scss */
+body {
+  margin: 52px 0 0;
+}
+
+/* [01.MAIN NAVIGATION] */
+/* line 28, ../sass/ptt_animate-upon-scroll.scss */
+#mainNavigation {
+  border-bottom: 1px solid #CCC;
+  border-radius: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* line 37, ../sass/ptt_animate-upon-scroll.scss */
+#mainNavigation .container-fluid {
+  background-color: transparent;
+  /* [AA.BRAND] */
+  /* [BB.VIDEO TITLE] */
+  /* [CC.VIDEO TITLE] */
+  /* [DD.PROFILE DROPDOWN] */
+}
+/* line 41, ../sass/ptt_animate-upon-scroll.scss */
+#mainNavigation .container-fluid #mainNavBrand {
+  width: 100%;
+}
+/* line 44, ../sass/ptt_animate-upon-scroll.scss */
+#mainNavigation .container-fluid #mainNavBrand img {
+  height: 25px;
+  margin: 0 auto;
+}
+/* line 50, ../sass/ptt_animate-upon-scroll.scss */
+#mainNavigation .container-fluid #mainNavDropDown {
+  display: none;
+}
+/* line 55, ../sass/ptt_animate-upon-scroll.scss */
+#mainNavigation .container-fluid #mainNavVidTitle {
+  display: none;
+}
+/* line 60, ../sass/ptt_animate-upon-scroll.scss */
+#mainNavigation .container-fluid #mainNavProfileDropDown {
+  display: none;
+}
+
+/* [02.PLAYER CONTAINER] */
+/* line 67, ../sass/ptt_animate-upon-scroll.scss */
+#playerContainer {
+  background-color: #000;
+}
+
+/* line 71, ../sass/ptt_animate-upon-scroll.scss */
+#playerContainer.vidFixedPosition {
+  bottom: 60px;
+  display: block;
+  height: 140px;
+  position: fixed;
+  right: 10px;
+  width: 70%;
+  z-index: 100;
+}
+
+/* [03.MENU BAR] */
+/* line 82, ../sass/ptt_animate-upon-scroll.scss */
+#menuBar {
+  display: none;
+}
+
+/* [04.SUB MENU BAR] */
+/* line 87, ../sass/ptt_animate-upon-scroll.scss */
+#subMenuBar {
+  display: none;
+}
+
+/* [05.BOOKMARK GRID] */
+/* line 94, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table thead {
+  display: none;
+}
+/* line 98, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table thead tr th {
+  font-weight: normal;
+  white-space: nowrap;
+}
+/* line 104, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody {
+  /* [NEW BOOKMARK] */
+}
+/* line 106, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody tr th {
+  display: block;
+  font-weight: normal;
+  width: 100%;
+}
+/* line 111, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody tr th img {
+  height: 160px;
+  width: initial;
+}
+/* line 119, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow {
+  background-color: #F5F5F5;
+}
+/* line 122, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark {
+  background-color: #E5E5E5;
+  overflow: hidden;
+  position: relative;
+}
+/* line 127, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #deleteContainer {
+  background-color: crimson;
+  height: 170px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/* line 139, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #deleteContainer:hover {
+  background-color: teal;
+  top: -85px;
+}
+/* line 145, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #delete a {
+  background-color: turquoise;
+  color: #CCC;
+  display: block;
+  text-align: center;
+}
+/* line 152, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #delete span {
+  color: #CC0000;
+  display: block;
+  font-size: 10px;
+}
+/* line 159, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #confirmDelete {
+  background-color: #D30000;
+  color: #FFF;
+  height: 100%;
+  left: 0;
+  padding: 35px 0 0 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+/* line 170, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #confirmDelete:hover {
+  opacity: .75;
+  text-decoration: none;
+}
+/* line 176, ../sass/ptt_animate-upon-scroll.scss */
+#bookmarkGrid table tbody .newBookMarkRow .image .tempImage {
+  background-color: #E5E5E5;
+  background-image: url(../../images/generating-image.gif);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  border: 1px solid #CCC;
+  color: #999;
+  display: block;
+  font-size: 10px;
+  height: 70px;
+  padding: 45px 0 0 0;
+  text-align: center;
+  width: 162px;
+}
+
+/* [06.MOBILE MENU BAR] */
+/* line 203, ../sass/ptt_animate-upon-scroll.scss */
+#mobileMenuBar {
+  background-color: #F5F5F5;
+  border-bottom: #CCC solid 1px;
+  display: block;
+  height: 40px;
+  margin: 0 0 10px;
+  padding: 5px 0;
+  position: relative;
+  text-align: center;
+}
+/* line 213, ../sass/ptt_animate-upon-scroll.scss */
+#mobileMenuBar h5 {
+  display: block;
+  margin: 0 0 2px;
+  padding: 0;
+}
+/* line 219, ../sass/ptt_animate-upon-scroll.scss */
+#mobileMenuBar ol {
+  position: relative;
+  bottom: 3px;
+}
+/* line 223, ../sass/ptt_animate-upon-scroll.scss */
+#mobileMenuBar ol li {
+  background-color: transparent;
+  border: 1px solid #999;
+}
+/* line 227, ../sass/ptt_animate-upon-scroll.scss */
+#mobileMenuBar ol li.active {
+  background-color: #CCC;
+}
+
+/* [07.MOBILE FOOTER MENU] */
+/* line 234, ../sass/ptt_animate-upon-scroll.scss */
+#mobileFooterMenu {
+  background-color: #FFF;
+  bottom: 0;
+  border-top: 1px solid #B2B2B2;
+  height: 50px;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+/* line 244, ../sass/ptt_animate-upon-scroll.scss */
+#mobileFooterMenu a {
+  color: #656565;
+  display: block;
+  height: 50px;
+  padding: 10px 0;
+}
+/* line 250, ../sass/ptt_animate-upon-scroll.scss */
+#mobileFooterMenu a span {
+  display: block;
+}
+/* line 254, ../sass/ptt_animate-upon-scroll.scss */
+#mobileFooterMenu a.active {
+  background-color: #EEE;
+  color: #58AEEF;
+}
+
+/* ---------------------------------- +/
+TABLET (PORTRAIT)
+Greater than 768px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MENU BAR
+04.SUB MENU BAR
+05.BOOKMARK GRID
+06.MOBILE MENU BAR
+07.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width: 768px) {
+  /* [00.GLOBAL] */
+  /* line 281, ../sass/ptt_animate-upon-scroll.scss */
+  body {
+    margin: 52px 0 0;
+  }
+
+  /* [01.MAIN NAVIGATION] */
+  /* line 286, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation {
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  /* line 295, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid {
+    background-color: transparent;
+    /* [AA.BRAND] */
+    /* [BB.VIDEO TITLE] */
+    /* [CC.PROFILE DROPDOWN] */
+  }
+  /* line 299, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavBrand {
+    width: inherit;
+  }
+  /* line 304, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavDropDown {
+    display: block;
+  }
+  /* line 309, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown {
+    display: block;
+  }
+
+  /* [02.PLAYER CONTAINER] */
+  /* line 316, ../sass/ptt_animate-upon-scroll.scss */
+  #playerContainer {
+    background-color: #000;
+  }
+
+  /* line 320, ../sass/ptt_animate-upon-scroll.scss */
+  #playerContainer.vidFixedPosition {
+    bottom: 10px;
+    display: block;
+    height: 220px;
+    position: fixed;
+    right: 10px;
+    width: 50%;
+    z-index: 100;
+  }
+
+  /* [03.MENU BAR] */
+  /* line 331, ../sass/ptt_animate-upon-scroll.scss */
+  #menuBar {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 0px 3px 10px #CCC;
+    display: block;
+    position: relative;
+    z-index: 20;
+  }
+  /* line 342, ../sass/ptt_animate-upon-scroll.scss */
+  #menuBar .container-fluid .nav li a {
+    color: #666;
+  }
+  /* line 347, ../sass/ptt_animate-upon-scroll.scss */
+  #menuBar .container-fluid .nav li.active a {
+    background-color: #666;
+    color: #FFF;
+  }
+
+  /* [04.SUB MENU BAR] */
+  /* line 357, ../sass/ptt_animate-upon-scroll.scss */
+  #subMenuBar {
+    background-color: #E5E5E5;
+    display: block;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  /* line 363, ../sass/ptt_animate-upon-scroll.scss */
+  #subMenuBar .container-fluid {
+    padding-top: 10px;
+  }
+  /* line 366, ../sass/ptt_animate-upon-scroll.scss */
+  #subMenuBar .container-fluid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* [05.BOOKMARK GRID] */
+  /* line 379, ../sass/ptt_animate-upon-scroll.scss */
+  #bookmarkGrid table thead {
+    display: table-header-group;
+  }
+  /* line 383, ../sass/ptt_animate-upon-scroll.scss */
+  #bookmarkGrid table thead tr th {
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  /* line 391, ../sass/ptt_animate-upon-scroll.scss */
+  #bookmarkGrid table tbody tr th {
+    display: table-cell;
+    font-weight: normal;
+    vertical-align: inherit;
+    width: initial;
+  }
+  /* line 397, ../sass/ptt_animate-upon-scroll.scss */
+  #bookmarkGrid table tbody tr th img {
+    height: 70px;
+    width: initial;
+  }
+
+  /* [06.MOBILE MENU BAR] */
+  /* line 408, ../sass/ptt_animate-upon-scroll.scss */
+  #mobileMenuBar {
+    display: none;
+  }
+
+  /* [07.MOBILE FOOTER MENU] */
+  /* line 413, ../sass/ptt_animate-upon-scroll.scss */
+  #mobileFooterMenu {
+    display: none;
+  }
+}
+/* [end] min-width:960px) */
+/* ---------------------------------- +/
+DESKTOP
+Greater than 960px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width: 960px) {
+  /* [00.GLOBAL] */
+  /* line 433, ../sass/ptt_animate-upon-scroll.scss */
+  body {
+    margin: 52px 0 0;
+  }
+
+  /* [01.MAIN NAVIGATION] */
+  /* line 438, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation {
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  /* line 447, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid {
+    background-color: transparent;
+    /* [AA.BRAND] */
+    /* [BB.VIDEO TITLE] */
+  }
+  /* line 453, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavBrand img {
+    height: 25px;
+  }
+  /* line 459, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavVidTitle {
+    background-color: transparent;
+    display: block !important;
+    float: left;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 0 0 15px;
+    position: relative;
+  }
+  /* line 468, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavVidTitle #nowWatching {
+    background-color: transparent;
+    color: #000;
+    font-size: 9px;
+    position: absolute;
+    top: 4px;
+  }
+
+  /* [02.PLAYER CONTAINER] */
+  /* line 480, ../sass/ptt_animate-upon-scroll.scss */
+  #playerContainer {
+    background-color: #000;
+  }
+
+  /* line 484, ../sass/ptt_animate-upon-scroll.scss */
+  #playerContainer.fixedPosition {
+    bottom: 10px;
+    display: block;
+    height: 290px;
+    position: fixed;
+    right: 10px;
+    width: 50%;
+    z-index: 100;
+  }
+
+  /* [03.MOBILE FOOTER MENU] */
+  /* line 495, ../sass/ptt_animate-upon-scroll.scss */
+  #mobileFooterMenu {
+    display: none;
+  }
+}
+/* [end] min-width:960px) */
+/* ---------------------------------- +/
+WIDE DESKTOP
+Greater than 1100px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width: 1200px) {
+  /* [00.GLOBAL] */
+  /* line 515, ../sass/ptt_animate-upon-scroll.scss */
+  body {
+    margin: 52px 0 0;
+  }
+
+  /* [01.MAIN NAVIGATION] */
+  /* line 520, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation {
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  /* line 529, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid {
+    background-color: transparent;
+    /* [AA.BRAND] */
+    /* [BB.BRAND] */
+  }
+  /* line 535, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavBrand img {
+    height: 25px;
+  }
+  /* line 543, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .videoTitle {
+    font-size: 14px;
+  }
+  /* line 549, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-toggle {
+    display: none;
+  }
+  /* line 553, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    margin: 8px 0;
+    min-width: 300px;
+    padding: 8px 0;
+    position: relative;
+  }
+  /* line 564, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li {
+    float: left;
+  }
+  /* line 567, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li a {
+    background-color: transparent;
+    border-right: 1px solid #666;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 3px;
+    padding: 3px 5px;
+  }
+  /* line 575, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li a:hover {
+    background-color: #FFF;
+    background-image: none;
+    color: #428BCA;
+  }
+  /* line 584, ../sass/ptt_animate-upon-scroll.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li:last-child a {
+    border: none;
+  }
+
+  /* [02.PLAYER CONTAINER] */
+  /* line 596, ../sass/ptt_animate-upon-scroll.scss */
+  #playerContainer {
+    background-color: #000;
+  }
+
+  /* line 600, ../sass/ptt_animate-upon-scroll.scss */
+  #playerContainer.vidFixedPosition {
+    bottom: 10px;
+    display: block;
+    height: 220px;
+    position: fixed;
+    right: 10px;
+    width: 30%;
+    z-index: 100;
+  }
+
+  /* [03.MOBILE FOOTER MENU] */
+  /* line 611, ../sass/ptt_animate-upon-scroll.scss */
+  #mobileFooterMenu {
+    display: none;
+  }
+}
+/* [end] min-width:1100px) */
