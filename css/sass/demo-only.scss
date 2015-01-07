@@ -1,0 +1,578 @@
+
+/* 
+LIVE PLAYER
+*/
+
+/* ---------------------------------- +/
+	MOBILE
+	Less than 768px
+
+	00.GLOBAL
+	01.MAIN NAVIGATION
+	02.PLAYER CONTAINER
+	03.MENU BAR
+	04.SUB MENU BAR
+	05.BOOKMARK GRID
+	06.MOBILE MENU BAR
+	07.MOBILE FOOTER MENU
+/+ ---------------------------------- */
+
+/* [00.GLOBAL] */ 
+body {}
+
+/* [01.MAIN NAVIGATION] */ 
+#mainNavigation {
+
+	.container-fluid {
+
+		/* [AA.BRAND] */ 
+		#mainNavBrand {
+
+			img {}
+		}
+		/* [BB.VIDEO TITLE] */
+		#mainNavDropDown {}
+
+		/* [CC.VIDEO TITLE] */ 
+		#mainNavVidTitle {}
+
+		/* [DD.PROFILE DROPDOWN] */ 
+		#mainNavProfileDropDown {}
+	}
+}
+
+/* [02.PLAYER CONTAINER] */ 
+#playerContainer {
+
+	.player {
+		iframe {
+			display: none;
+		}
+	}
+
+	.placeHolder {
+		h1 {}
+	}
+}
+
+#playerContainer.vidFixedPosition {}
+
+/* [03.MENU BAR] */
+#menuBar {}
+
+/* [04.SUB MENU BAR] */
+#subMenuBar {
+	display: none;
+}
+
+/* [05.BOOKMARK GRID] */
+#bookmarkGrid {
+	table {
+		thead {
+			display: none;
+
+			tr {
+				th {
+					font-weight: normal;
+					white-space: nowrap;
+				}
+			}
+		}
+		tbody {
+			tr {
+				th {
+					display: block;
+					font-weight: normal;
+					width: 100%;
+
+					img {
+						height: 160px;
+						width: initial;
+					}
+				}
+			}
+
+			/* [NEW BOOKMARK] */
+			.newBookMarkRow {
+				background-color: #F5F5F5;
+
+				.deleteBookmark {
+					background-color: #E5E5E5;
+					overflow: hidden;
+					position: relative;
+
+					#deleteContainer {
+						background-color: crimson;
+						height: 170px;
+						left: 0;
+						position: absolute;
+						top: 0;
+						width: 100%;
+						-webkit-transition: all 0.3s linear;
+						-moz-transition: all 0.3s linear;
+						-o-transition: all 0.3s linear;
+						transition: all 0.3s linear;
+					}
+					#deleteContainer:hover {
+						background-color: teal;
+						top: -85px;
+					}
+
+					#delete {
+						a {
+							background-color: turquoise;
+							color: #CCC;
+							display: block;
+							text-align: center;
+						}
+
+						span {
+							color: #CC0000;
+							display: block;
+							font-size: 10px;
+						}
+					}
+
+					#confirmDelete {
+						background-color: #D30000;
+						color: #FFF;
+						height: 100%;
+						left: 0;
+						padding: 35px 0 0 0;
+						position: absolute;
+						text-align: center;
+						top: 0;
+						width: 100%;
+					}
+					#confirmDelete:hover {
+						opacity: .75;
+						text-decoration: none;
+					}
+				}
+				.image {
+					.tempImage {
+						background-color: #E5E5E5;
+						background-image: url(../../images/generating-image.gif);
+						background-position: 50% 30%;
+						background-repeat: no-repeat;
+						background-size: 25px;
+						border: 1px solid #CCC;
+						color: #999;
+						display: block;
+						font-size: 10px;
+						height: 70px;
+						padding: 45px 0 0 0;
+						text-align: center;
+						width: 162px;
+					}
+				}
+				.title {}
+				.startTime {}
+				.endTime {}
+				.duration {}
+				.tags {}
+			}
+		}
+	}
+}
+
+/* [06.MOBILE MENU BAR] */
+#mobileMenuBar {
+	background-color: #F5F5F5;
+	border-bottom: #CCC solid 1px;
+	display: block;
+	height: 40px;
+	margin: 0 0 10px;
+	padding: 5px 0;
+	position: relative;
+	text-align: center;
+
+	h5 {
+		display: block;
+		margin: 0 0 2px;
+		padding: 0;
+	}
+
+	ol {
+		position: relative;
+		bottom: 3px;
+
+		li {
+			background-color: transparent;
+			border: 1px solid #999;
+		}
+		li.active {
+			background-color: #CCC;
+		}
+	}
+}
+
+/* [07.MOBILE FOOTER MENU] */
+#mobileFooterMenu {
+	background-color: #FFF;
+	bottom: 0;
+	border-top: 1px solid #B2B2B2;
+	height: 50px;
+	padding: 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+
+	a {
+		color: #656565;
+		display: block;
+		height: 50px;
+		padding: 10px 0;
+
+		span {
+			display: block;
+		}
+	}
+	a.active {
+		background-color: #EEE;
+		color: #58AEEF;
+	}
+}
+
+
+
+
+
+/* ---------------------------------- +/
+TABLET (PORTRAIT)
+Greater than 768px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MENU BAR
+04.SUB MENU BAR
+05.BOOKMARK GRID
+06.MOBILE MENU BAR
+07.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width:768px){
+
+	/* [00.GLOBAL] */ 
+	body {
+		margin: 52px 0 0;
+	}
+
+	/* [01.MAIN NAVIGATION] */ 
+	#mainNavigation {
+		border-bottom: 1px solid #CCC;
+		border-radius: 0;
+		margin: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+
+		.container-fluid {
+			background-color: transparent;
+
+			/* [AA.BRAND] */ 
+			#mainNavBrand {
+				width: inherit;
+			}
+
+			/* [BB.VIDEO TITLE] */
+			#mainNavDropDown {
+				display: block;
+			}
+
+			/* [CC.PROFILE DROPDOWN] */ 
+			#mainNavProfileDropDown {
+				display: block;
+			}
+		}
+	}
+
+	#playerContainer.vidFixedPosition {
+		bottom: 10px;
+		display: block;
+		height: 220px;
+		position: fixed;
+		right: 10px;
+		width: 50%;
+		z-index: 100;
+	}
+
+	/* [03.MENU BAR] */
+	#menuBar {
+		background-color: #F5F5F5;
+		border-bottom: 1px solid #E5E5E5;
+		box-shadow: 0px 3px 10px #CCC;
+		display: block;
+		position: relative;
+		z-index: 20;
+
+		.container-fluid {
+			.nav {
+				li {
+					a {
+						color: #666;
+					}
+				}
+				li.active {
+					a {
+						background-color: #666;
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+
+	/* [04.SUB MENU BAR] */
+	#subMenuBar {
+		background-color: #E5E5E5;
+		display: block;
+		height: 50px;
+		margin-bottom: 15px;
+
+		.container-fluid {
+			padding-top: 10px;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {}
+			}
+		}
+	}
+
+	/* [05.BOOKMARK GRID] */
+	#bookmarkGrid {
+		table {
+			thead {
+				display:table-header-group;
+
+				tr {
+					th {
+						font-weight: normal;
+						white-space: nowrap;
+					}
+				}
+			}
+			tbody {
+				tr {
+					th {
+						display: table-cell;
+						font-weight: normal;
+						vertical-align: inherit;
+						width: initial;
+
+						img {
+							height: 70px;
+							width: initial;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/* [06.MOBILE MENU BAR] */
+	#mobileMenuBar {
+		display: none;
+	}
+
+	/* [07.MOBILE FOOTER MENU] */
+	#mobileFooterMenu {
+		display: none;
+	}
+
+}/* [end] min-width:960px) */
+
+
+/* ---------------------------------- +/
+DESKTOP
+Greater than 960px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width:960px){
+
+	/* [00.GLOBAL] */ 
+	body {
+		margin: 52px 0 0;
+	}
+
+	/* [01.MAIN NAVIGATION] */ 
+	#mainNavigation {
+		border-bottom: 1px solid #CCC;
+		border-radius: 0;
+		margin: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+
+		.container-fluid {
+			background-color: transparent;
+
+			/* [AA.BRAND] */ 
+			#mainNavBrand {
+
+				img {
+					height: 25px;
+				}
+			}
+
+			/* [BB.VIDEO TITLE] */ 
+			#mainNavVidTitle {
+				background-color: transparent;
+				display: block !important;
+				float: left;
+				font-size: 15px;
+				font-weight: 500;
+				padding: 15px 0 0 15px;
+				position: relative;
+
+				#nowWatching {
+					background-color: transparent;
+					color: #000;
+					font-size: 9px;
+					position: absolute;
+					top: 4px;
+				}
+			}
+		}
+	}
+
+	#playerContainer.fixedPosition {
+		bottom: 10px;
+		display: block;
+		height: 290px;
+		position: fixed;
+		right: 10px;
+		width: 50%;
+		z-index: 100;
+	}
+
+	/* [03.MOBILE FOOTER MENU] */
+	#mobileFooterMenu {
+		display: none;
+	}
+
+}/* [end] min-width:960px) */
+
+
+/* ---------------------------------- +/
+WIDE DESKTOP
+Greater than 1100px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width:1200px){
+
+	/* [00.GLOBAL] */ 
+	body {
+		margin: 52px 0 0;
+	}
+	
+	/* [01.MAIN NAVIGATION] */ 
+	#mainNavigation {
+		border-bottom: 1px solid #CCC;
+		border-radius: 0;
+		margin: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+
+		.container-fluid {
+			background-color: transparent;
+
+			/* [AA.BRAND] */ 
+			#mainNavBrand {
+
+				img {
+					height: 25px;
+				}
+			}
+
+			/* [BB.BRAND] */
+			#mainNavProfileDropDown {
+
+				.videoTitle {
+					font-size: 14px;
+				}
+
+				.dropdown {
+
+					.dropdown-toggle {
+						display: none;
+					}
+
+					.dropdown-menu {
+						background-color: transparent;
+						border: none;
+						border-radius: 0;
+						box-shadow: none;
+						display: block;
+						margin: 8px 0;
+						min-width: 300px;
+						padding: 8px 0;
+						position: relative;
+
+						li {
+							float: left;
+
+							a {
+								background-color: transparent;
+								border-right: 1px solid #666;
+								display: inline-block;
+								font-size: 12px;
+								margin: 0 3px;
+								padding: 3px 5px;
+							}
+							a:hover {
+								background-color: #FFF;
+								background-image: none;
+								color: #428BCA;
+
+							}
+						}
+						li:last-child {
+
+							a {
+								border: none;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+
+	#playerContainer.vidFixedPosition {
+		bottom: 10px;
+		display: block;
+		height: 220px;
+		position: fixed;
+		right: 10px;
+		width: 30%;
+		z-index: 100;
+	}
+
+	/* [03.MOBILE FOOTER MENU] */
+	#mobileFooterMenu {
+		display: none;
+	}
+
+} /* [end] min-width:1100px) */

@@ -1,0 +1,514 @@
+/* 
+LIVE PLAYER
+*/
+/* ---------------------------------- +/
+	MOBILE
+	Less than 768px
+
+	00.GLOBAL
+	01.MAIN NAVIGATION
+	02.PLAYER CONTAINER
+	03.MENU BAR
+	04.SUB MENU BAR
+	05.BOOKMARK GRID
+	06.MOBILE MENU BAR
+	07.MOBILE FOOTER MENU
+/+ ---------------------------------- */
+/* [00.GLOBAL] */
+/* [01.MAIN NAVIGATION] */
+/* line 26, ../sass/demo-only.scss */
+#mainNavigation .container-fluid {
+  /* [AA.BRAND] */
+  /* [BB.VIDEO TITLE] */
+  /* [CC.VIDEO TITLE] */
+  /* [DD.PROFILE DROPDOWN] */
+}
+
+/* [02.PLAYER CONTAINER] */
+/* line 48, ../sass/demo-only.scss */
+#playerContainer .player iframe {
+  display: none;
+}
+
+/* [03.MENU BAR] */
+/* [04.SUB MENU BAR] */
+/* line 64, ../sass/demo-only.scss */
+#subMenuBar {
+  display: none;
+}
+
+/* [05.BOOKMARK GRID] */
+/* line 71, ../sass/demo-only.scss */
+#bookmarkGrid table thead {
+  display: none;
+}
+/* line 75, ../sass/demo-only.scss */
+#bookmarkGrid table thead tr th {
+  font-weight: normal;
+  white-space: nowrap;
+}
+/* line 81, ../sass/demo-only.scss */
+#bookmarkGrid table tbody {
+  /* [NEW BOOKMARK] */
+}
+/* line 83, ../sass/demo-only.scss */
+#bookmarkGrid table tbody tr th {
+  display: block;
+  font-weight: normal;
+  width: 100%;
+}
+/* line 88, ../sass/demo-only.scss */
+#bookmarkGrid table tbody tr th img {
+  height: 160px;
+  width: initial;
+}
+/* line 96, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow {
+  background-color: #F5F5F5;
+}
+/* line 99, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark {
+  background-color: #E5E5E5;
+  overflow: hidden;
+  position: relative;
+}
+/* line 104, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #deleteContainer {
+  background-color: crimson;
+  height: 170px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/* line 116, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #deleteContainer:hover {
+  background-color: teal;
+  top: -85px;
+}
+/* line 122, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #delete a {
+  background-color: turquoise;
+  color: #CCC;
+  display: block;
+  text-align: center;
+}
+/* line 129, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #delete span {
+  color: #CC0000;
+  display: block;
+  font-size: 10px;
+}
+/* line 136, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #confirmDelete {
+  background-color: #D30000;
+  color: #FFF;
+  height: 100%;
+  left: 0;
+  padding: 35px 0 0 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+/* line 147, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #confirmDelete:hover {
+  opacity: .75;
+  text-decoration: none;
+}
+/* line 153, ../sass/demo-only.scss */
+#bookmarkGrid table tbody .newBookMarkRow .image .tempImage {
+  background-color: #E5E5E5;
+  background-image: url(../../images/generating-image.gif);
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  border: 1px solid #CCC;
+  color: #999;
+  display: block;
+  font-size: 10px;
+  height: 70px;
+  padding: 45px 0 0 0;
+  text-align: center;
+  width: 162px;
+}
+
+/* [06.MOBILE MENU BAR] */
+/* line 180, ../sass/demo-only.scss */
+#mobileMenuBar {
+  background-color: #F5F5F5;
+  border-bottom: #CCC solid 1px;
+  display: block;
+  height: 40px;
+  margin: 0 0 10px;
+  padding: 5px 0;
+  position: relative;
+  text-align: center;
+}
+/* line 190, ../sass/demo-only.scss */
+#mobileMenuBar h5 {
+  display: block;
+  margin: 0 0 2px;
+  padding: 0;
+}
+/* line 196, ../sass/demo-only.scss */
+#mobileMenuBar ol {
+  position: relative;
+  bottom: 3px;
+}
+/* line 200, ../sass/demo-only.scss */
+#mobileMenuBar ol li {
+  background-color: transparent;
+  border: 1px solid #999;
+}
+/* line 204, ../sass/demo-only.scss */
+#mobileMenuBar ol li.active {
+  background-color: #CCC;
+}
+
+/* [07.MOBILE FOOTER MENU] */
+/* line 211, ../sass/demo-only.scss */
+#mobileFooterMenu {
+  background-color: #FFF;
+  bottom: 0;
+  border-top: 1px solid #B2B2B2;
+  height: 50px;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+/* line 221, ../sass/demo-only.scss */
+#mobileFooterMenu a {
+  color: #656565;
+  display: block;
+  height: 50px;
+  padding: 10px 0;
+}
+/* line 227, ../sass/demo-only.scss */
+#mobileFooterMenu a span {
+  display: block;
+}
+/* line 231, ../sass/demo-only.scss */
+#mobileFooterMenu a.active {
+  background-color: #EEE;
+  color: #58AEEF;
+}
+
+/* ---------------------------------- +/
+TABLET (PORTRAIT)
+Greater than 768px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MENU BAR
+04.SUB MENU BAR
+05.BOOKMARK GRID
+06.MOBILE MENU BAR
+07.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width: 768px) {
+  /* [00.GLOBAL] */
+  /* line 258, ../sass/demo-only.scss */
+  body {
+    margin: 52px 0 0;
+  }
+
+  /* [01.MAIN NAVIGATION] */
+  /* line 263, ../sass/demo-only.scss */
+  #mainNavigation {
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  /* line 272, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid {
+    background-color: transparent;
+    /* [AA.BRAND] */
+    /* [BB.VIDEO TITLE] */
+    /* [CC.PROFILE DROPDOWN] */
+  }
+  /* line 276, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavBrand {
+    width: inherit;
+  }
+  /* line 281, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavDropDown {
+    display: block;
+  }
+  /* line 286, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown {
+    display: block;
+  }
+
+  /* line 292, ../sass/demo-only.scss */
+  #playerContainer.vidFixedPosition {
+    bottom: 10px;
+    display: block;
+    height: 220px;
+    position: fixed;
+    right: 10px;
+    width: 50%;
+    z-index: 100;
+  }
+
+  /* [03.MENU BAR] */
+  /* line 303, ../sass/demo-only.scss */
+  #menuBar {
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 0px 3px 10px #CCC;
+    display: block;
+    position: relative;
+    z-index: 20;
+  }
+  /* line 314, ../sass/demo-only.scss */
+  #menuBar .container-fluid .nav li a {
+    color: #666;
+  }
+  /* line 319, ../sass/demo-only.scss */
+  #menuBar .container-fluid .nav li.active a {
+    background-color: #666;
+    color: #FFF;
+  }
+
+  /* [04.SUB MENU BAR] */
+  /* line 329, ../sass/demo-only.scss */
+  #subMenuBar {
+    background-color: #E5E5E5;
+    display: block;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  /* line 335, ../sass/demo-only.scss */
+  #subMenuBar .container-fluid {
+    padding-top: 10px;
+  }
+  /* line 338, ../sass/demo-only.scss */
+  #subMenuBar .container-fluid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* [05.BOOKMARK GRID] */
+  /* line 351, ../sass/demo-only.scss */
+  #bookmarkGrid table thead {
+    display: table-header-group;
+  }
+  /* line 355, ../sass/demo-only.scss */
+  #bookmarkGrid table thead tr th {
+    font-weight: normal;
+    white-space: nowrap;
+  }
+  /* line 363, ../sass/demo-only.scss */
+  #bookmarkGrid table tbody tr th {
+    display: table-cell;
+    font-weight: normal;
+    vertical-align: inherit;
+    width: initial;
+  }
+  /* line 369, ../sass/demo-only.scss */
+  #bookmarkGrid table tbody tr th img {
+    height: 70px;
+    width: initial;
+  }
+
+  /* [06.MOBILE MENU BAR] */
+  /* line 380, ../sass/demo-only.scss */
+  #mobileMenuBar {
+    display: none;
+  }
+
+  /* [07.MOBILE FOOTER MENU] */
+  /* line 385, ../sass/demo-only.scss */
+  #mobileFooterMenu {
+    display: none;
+  }
+}
+/* [end] min-width:960px) */
+/* ---------------------------------- +/
+DESKTOP
+Greater than 960px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width: 960px) {
+  /* [00.GLOBAL] */
+  /* line 405, ../sass/demo-only.scss */
+  body {
+    margin: 52px 0 0;
+  }
+
+  /* [01.MAIN NAVIGATION] */
+  /* line 410, ../sass/demo-only.scss */
+  #mainNavigation {
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  /* line 419, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid {
+    background-color: transparent;
+    /* [AA.BRAND] */
+    /* [BB.VIDEO TITLE] */
+  }
+  /* line 425, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavBrand img {
+    height: 25px;
+  }
+  /* line 431, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavVidTitle {
+    background-color: transparent;
+    display: block !important;
+    float: left;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 0 0 15px;
+    position: relative;
+  }
+  /* line 440, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavVidTitle #nowWatching {
+    background-color: transparent;
+    color: #000;
+    font-size: 9px;
+    position: absolute;
+    top: 4px;
+  }
+
+  /* line 451, ../sass/demo-only.scss */
+  #playerContainer.fixedPosition {
+    bottom: 10px;
+    display: block;
+    height: 290px;
+    position: fixed;
+    right: 10px;
+    width: 50%;
+    z-index: 100;
+  }
+
+  /* [03.MOBILE FOOTER MENU] */
+  /* line 462, ../sass/demo-only.scss */
+  #mobileFooterMenu {
+    display: none;
+  }
+}
+/* [end] min-width:960px) */
+/* ---------------------------------- +/
+WIDE DESKTOP
+Greater than 1100px
+
+00.GLOBAL
+01.MAIN NAVIGATION
+02.PLAYER CONTAINER
+03.MOBILE FOOTER MENU
+
+/+ ---------------------------------- */
+@media (min-width: 1200px) {
+  /* [00.GLOBAL] */
+  /* line 482, ../sass/demo-only.scss */
+  body {
+    margin: 52px 0 0;
+  }
+
+  /* [01.MAIN NAVIGATION] */
+  /* line 487, ../sass/demo-only.scss */
+  #mainNavigation {
+    border-bottom: 1px solid #CCC;
+    border-radius: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  /* line 496, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid {
+    background-color: transparent;
+    /* [AA.BRAND] */
+    /* [BB.BRAND] */
+  }
+  /* line 502, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavBrand img {
+    height: 25px;
+  }
+  /* line 510, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .videoTitle {
+    font-size: 14px;
+  }
+  /* line 516, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-toggle {
+    display: none;
+  }
+  /* line 520, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    margin: 8px 0;
+    min-width: 300px;
+    padding: 8px 0;
+    position: relative;
+  }
+  /* line 531, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li {
+    float: left;
+  }
+  /* line 534, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li a {
+    background-color: transparent;
+    border-right: 1px solid #666;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 3px;
+    padding: 3px 5px;
+  }
+  /* line 542, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li a:hover {
+    background-color: #FFF;
+    background-image: none;
+    color: #428BCA;
+  }
+  /* line 551, ../sass/demo-only.scss */
+  #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li:last-child a {
+    border: none;
+  }
+
+  /* line 563, ../sass/demo-only.scss */
+  #playerContainer.vidFixedPosition {
+    bottom: 10px;
+    display: block;
+    height: 220px;
+    position: fixed;
+    right: 10px;
+    width: 30%;
+    z-index: 100;
+  }
+
+  /* [03.MOBILE FOOTER MENU] */
+  /* line 574, ../sass/demo-only.scss */
+  #mobileFooterMenu {
+    display: none;
+  }
+}
+/* [end] min-width:1100px) */

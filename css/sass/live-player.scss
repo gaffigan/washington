@@ -1,7 +1,6 @@
 
 /* 
-Animate Upon Scroll Coordinate
-tag: ptt_animate-upon-scroll
+LIVE PLAYER
 */
 
 /* ---------------------------------- +/
@@ -21,12 +20,15 @@ Less than 768px
 
 /* [00.GLOBAL] */ 
 body {
-	margin: 52px 0 0;
+	margin: 56px 0 0;
 }
 
 /* [01.MAIN NAVIGATION] */ 
 #mainNavigation {
 	border-bottom: 1px solid #CCC;
+	border-left: none;
+	border-right: none;
+	border-top: none;
 	border-radius: 0;
 	margin: 0;
 	position: fixed;
@@ -65,7 +67,30 @@ body {
 
 /* [02.PLAYER CONTAINER] */ 
 #playerContainer {
-	background-color: #000;
+	background-color: aquamarine;
+	padding-right: 0;
+	padding-left: 0;
+	position: relative;
+
+	.player {
+		position: relative;
+		z-index: 10;
+	}
+
+	.placeHolder {
+		background-color: #CCC;
+		min-height: 315px;
+		margin: 0;
+		padding: 215px 0 0;
+		text-align: center;
+		z-index: 0;s
+
+		h1 {
+			color: #999;
+			font-size: 24px;
+			margin: 0;
+		}
+	}
 }
 
 #playerContainer.vidFixedPosition {
@@ -77,6 +102,32 @@ body {
 	width: 70%;
 	z-index: 100;
 }
+
+
+
+
+#titleBlock {
+	/* background-color: darkcyan; */
+	background-color: transparent;
+
+	.col-md-8 {
+		font-size: 24px;
+	}
+	.col-md-4 {
+		#shareButtons {
+			button {
+				background-color: transparent;
+				background-image: none;
+				border-radius: 0;
+				border: none;
+				text-shadow: none;
+			}
+		}
+	}
+}
+
+
+
 
 /* [03.MENU BAR] */
 #menuBar {
@@ -312,11 +363,6 @@ Greater than 768px
 		}
 	}
 
-	/* [02.PLAYER CONTAINER] */
-	#playerContainer {
-		background-color: #000;
-	}
-
 	#playerContainer.vidFixedPosition {
 		bottom: 10px;
 		display: block;
@@ -476,11 +522,6 @@ Greater than 960px
 		}
 	}
 
-	/* [02.PLAYER CONTAINER] */
-	#playerContainer {
-		background-color: #000;
-	}
-
 	#playerContainer.fixedPosition {
 		bottom: 10px;
 		display: block;
@@ -592,10 +633,6 @@ Greater than 1100px
 		}
 	}
 
-	/* [02.PLAYER CONTAINER] */
-	#playerContainer {
-		background-color: #000;
-	}
 
 	#playerContainer.vidFixedPosition {
 		bottom: 10px;
