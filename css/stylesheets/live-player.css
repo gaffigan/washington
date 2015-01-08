@@ -1,28 +1,39 @@
 /* 
-LIVE PLAYER
+
+LIVE PLAYER PROTOTYPE
+
+================================
+MEDIA
+================================
+01. MOBILE (Less than 768px)
+02. TABLET (Greater than 768px)
+
+================================
+SECTIONS
+================================
+A. Global
+B. Main Navigation
+C. Player Container
+D. Title Block
+E. Desktop Player Menu
+F. Info Panel Container
+G. Mobile Footer 
+H. Single Video Navigation
+I. Share Panel
+J. Single Bookmark
+
 */
 /* ---------------------------------- +/
-MOBILE
-Less than 768px
-
-00.GLOBAL
-01.MAIN NAVIGATION
-02.PLAYER CONTAINER
-03.MENU BAR
-04.SUB MENU BAR
-05.BOOKMARK GRID
-06.MOBILE MENU BAR
-07.MOBILE FOOTER MENU
-
+01. MOBILE (Less than 768px)
 /+ ---------------------------------- */
-/* [00.GLOBAL] */
-/* line 22, ../sass/live-player.scss */
+/* [A] Global */
+/* line 33, ../sass/live-player.scss */
 body {
-  margin: 56px 0 0;
+  margin: 262px 0 50px 0;
 }
 
-/* [01.MAIN NAVIGATION] */
-/* line 27, ../sass/live-player.scss */
+/* [B] Main Navigation */
+/* line 38, ../sass/live-player.scss */
 #mainNavigation {
   border-bottom: 1px solid #CCC;
   border-left: none;
@@ -33,9 +44,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 101;
 }
-/* line 39, ../sass/live-player.scss */
+/* line 50, ../sass/live-player.scss */
 #mainNavigation .container-fluid {
   background-color: transparent;
   /* [AA.BRAND] */
@@ -43,201 +54,343 @@ body {
   /* [CC.VIDEO TITLE] */
   /* [DD.PROFILE DROPDOWN] */
 }
-/* line 43, ../sass/live-player.scss */
+/* line 54, ../sass/live-player.scss */
 #mainNavigation .container-fluid #mainNavBrand {
   width: 100%;
 }
-/* line 46, ../sass/live-player.scss */
+/* line 57, ../sass/live-player.scss */
 #mainNavigation .container-fluid #mainNavBrand img {
   height: 25px;
   margin: 0 auto;
 }
-/* line 52, ../sass/live-player.scss */
+/* line 63, ../sass/live-player.scss */
 #mainNavigation .container-fluid #mainNavDropDown {
   display: none;
 }
-/* line 57, ../sass/live-player.scss */
+/* line 68, ../sass/live-player.scss */
 #mainNavigation .container-fluid #mainNavVidTitle {
   display: none;
 }
-/* line 62, ../sass/live-player.scss */
+/* line 73, ../sass/live-player.scss */
 #mainNavigation .container-fluid #mainNavProfileDropDown {
   display: none;
 }
 
-/* [02.PLAYER CONTAINER] */
-/* line 69, ../sass/live-player.scss */
-#playerContainer {
-  background-color: aquamarine;
-  padding-right: 0;
-  padding-left: 0;
-  position: relative;
-}
-/* line 75, ../sass/live-player.scss */
-#playerContainer .player {
-  position: relative;
-  z-index: 10;
-}
+/* [C] Player Container */
 /* line 80, ../sass/live-player.scss */
-#playerContainer .placeHolder {
-  background-color: #CCC;
-  min-height: 315px;
-  margin: 0;
-  padding: 215px 0 0;
-  text-align: center;
-  z-index: 0;
-}
-/* line 88, ../sass/live-player.scss */
-#playerContainer .placeHolder s
-h1 {
-  color: #999;
-  font-size: 24px;
-  margin: 0;
-}
-
-/* line 96, ../sass/live-player.scss */
-#playerContainer.vidFixedPosition {
-  bottom: 60px;
-  display: block;
-  height: 140px;
+#playerContainer {
+  left: 0px;
   position: fixed;
-  right: 10px;
-  width: 70%;
+  top: 51px;
+  width: 100%;
   z-index: 100;
 }
 
-/* line 109, ../sass/live-player.scss */
+/* [D] Title Block */
+/* line 89, ../sass/live-player.scss */
 #titleBlock {
-  /* background-color: darkcyan; */
-  background-color: transparent;
+  background-color: #FFF;
+  margin: 0;
 }
-/* line 113, ../sass/live-player.scss */
+/* line 93, ../sass/live-player.scss */
 #titleBlock .col-md-8 {
+  display: none;
   font-size: 24px;
+  line-height: 24px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
-/* line 118, ../sass/live-player.scss */
-#titleBlock .col-md-4 #shareButtons button {
+/* line 102, ../sass/live-player.scss */
+#titleBlock .col-md-4 #shareButtons {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #EEE;
+  border-top: 1px solid #EEE;
+}
+/* line 107, ../sass/live-player.scss */
+#titleBlock .col-md-4 #shareButtons .col-md-4 {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+/* line 111, ../sass/live-player.scss */
+#titleBlock .col-md-4 #shareButtons .col-md-4 button {
   background-color: transparent;
   background-image: none;
   border-radius: 0;
   border: none;
+  border-color: transparent;
+  box-shadow: none;
   text-shadow: none;
-}
-
-/* [03.MENU BAR] */
-/* line 133, ../sass/live-player.scss */
-#menuBar {
-  display: none;
-}
-
-/* [04.SUB MENU BAR] */
-/* line 138, ../sass/live-player.scss */
-#subMenuBar {
-  display: none;
-}
-
-/* [05.BOOKMARK GRID] */
-/* line 145, ../sass/live-player.scss */
-#bookmarkGrid table thead {
-  display: none;
-}
-/* line 149, ../sass/live-player.scss */
-#bookmarkGrid table thead tr th {
-  font-weight: normal;
-  white-space: nowrap;
-}
-/* line 155, ../sass/live-player.scss */
-#bookmarkGrid table tbody {
-  /* [NEW BOOKMARK] */
-}
-/* line 157, ../sass/live-player.scss */
-#bookmarkGrid table tbody tr th {
-  display: block;
-  font-weight: normal;
   width: 100%;
 }
-/* line 162, ../sass/live-player.scss */
-#bookmarkGrid table tbody tr th img {
-  height: 160px;
-  width: initial;
+
+/* [E] Desktop Player Menu */
+/* line 127, ../sass/live-player.scss */
+#playerMenu {
+  display: none;
 }
-/* line 170, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow {
-  background-color: #F5F5F5;
-}
-/* line 173, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark {
-  background-color: #E5E5E5;
-  overflow: hidden;
+
+/* [F] Info Panel Container */
+/* line 132, ../sass/live-player.scss */
+#infoPanelContainer {
   position: relative;
+  padding-top: 25px;
+  /* [F.01] Carousel Indicators */
+  /* [F.02] Single Player Options */
 }
-/* line 178, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #deleteContainer {
-  background-color: crimson;
-  height: 170px;
+/* line 137, ../sass/live-player.scss */
+#infoPanelContainer .carousel-indicators {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #EEE;
+  bottom: 0;
+  height: 25px;
   left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 3px;
   position: absolute;
   top: 0;
   width: 100%;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+}
+/* line 150, ../sass/live-player.scss */
+#infoPanelContainer .carousel-indicators li {
+  border: 1px solid #999;
+}
+/* line 153, ../sass/live-player.scss */
+#infoPanelContainer .carousel-indicators .active {
+  background-color: #aad5fa;
+  border: 1px solid #999;
+}
+/* line 166, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel {
+  padding: 40px 0 0;
+}
+/* line 169, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel header {
+  background-color: transparent;
+  display: block;
+  left: 0;
+  margin: 0;
+  padding: 10px 0;
+  position: fixed;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+}
+/* line 181, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel header h1 {
+  color: #666;
+  font-size: 18px;
+  margin: 0;
+}
+/* line 186, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel header #leftOption {
+  left: 10px;
+  position: absolute;
 }
 /* line 190, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #deleteContainer:hover {
-  background-color: teal;
-  top: -85px;
-}
-/* line 196, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #delete a {
-  background-color: turquoise;
-  color: #CCC;
-  display: block;
-  text-align: center;
-}
-/* line 203, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #delete span {
-  color: #CC0000;
-  display: block;
-  font-size: 10px;
-}
-/* line 210, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #confirmDelete {
-  background-color: #D30000;
-  color: #FFF;
-  height: 100%;
-  left: 0;
-  padding: 35px 0 0 0;
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel header #rightOption {
+  background-color: #F2F2F2;
+  border: 1px solid #EEE;
+  color: #AAA;
+  padding: 5px 10px;
   position: absolute;
+  right: 10px;
+  top: 4px;
+}
+/* line 201, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel .individualPanel {
+  background-color: #EEEEEE;
+}
+/* line 204, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel .individualPanel .shareInfo {
+  padding: 0 10px 10px;
+}
+/* line 207, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel .individualPanel .shareInfo h2 {
+  border-bottom: 2px solid #FFF;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 1px 0 10px;
+  padding: 10px 0 10px;
+}
+/* line 215, ../sass/live-player.scss */
+#infoPanelContainer #singlePlayerOptions .carousel-inner .item .optionPanel .individualPanel .shareInfo p {
+  font-size: 14px;
+}
+
+/* [G] Mobile Footer */
+/* line 228, ../sass/live-player.scss */
+#mobileFooter {
+  background-color: #FFF;
+  bottom: 0;
+  border-top: 1px solid #B2B2B2;
+  height: 50px;
+  padding: 0;
+  position: fixed;
   text-align: center;
-  top: 0;
   width: 100%;
 }
-/* line 221, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .deleteBookmark #confirmDelete:hover {
-  opacity: .75;
+/* line 238, ../sass/live-player.scss */
+#mobileFooter .col-xs-3 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 242, ../sass/live-player.scss */
+#mobileFooter .col-xs-3 a {
+  color: #656565;
+  display: block;
+  height: 50px;
+  padding: 10px 0;
+}
+/* line 248, ../sass/live-player.scss */
+#mobileFooter .col-xs-3 a span {
+  display: block;
+}
+/* line 252, ../sass/live-player.scss */
+#mobileFooter .col-xs-3 a.active {
+  background-color: #EEE;
+  color: #58AEEF;
+}
+
+/* [H] Single Video Navigation */
+/* line 260, ../sass/live-player.scss */
+#singleVidNav {
+  display: none;
+}
+
+/* [I] Share Panel */
+/* line 265, ../sass/live-player.scss */
+#sharePanel {
+  background-color: #FFF;
+  border-bottom: 1px solid #CCC;
+  left: 0;
+  margin: 0 0 15px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+/* line 276, ../sass/live-player.scss */
+#sharePanel .col-xs-4 {
+  border-right: 1px solid #CCC;
+  /* [I.01] Share Option */
+}
+/* line 280, ../sass/live-player.scss */
+#sharePanel .col-xs-4 .shareOption {
+  background-color: transparent;
+  color: #428bca;
+  display: block;
+  padding: 5px;
+  text-align: center;
   text-decoration: none;
 }
-/* line 227, ../sass/live-player.scss */
-#bookmarkGrid table tbody .newBookMarkRow .image .tempImage {
-  background-color: #E5E5E5;
-  background-image: url(../../images/generating-image.gif);
-  background-position: 50% 30%;
-  background-repeat: no-repeat;
-  background-size: 25px;
-  border: 1px solid #CCC;
-  color: #999;
+/* line 288, ../sass/live-player.scss */
+#sharePanel .col-xs-4 .active {
+  background-color: #616161;
+  color: #FFF;
+}
+/* line 292, ../sass/live-player.scss */
+#sharePanel .col-xs-4 .active span {
+  color: #ee4c44;
+}
+/* line 298, ../sass/live-player.scss */
+#sharePanel .col-xs-4:nth-child(2) {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 303, ../sass/live-player.scss */
+#sharePanel .col-xs-4:last-child {
+  border-right: none;
+}
+
+/* [J] Share Panel */
+/* line 309, ../sass/live-player.scss */
+.singleBookmark {
+  background-color: transparent;
+  border-top: 1px solid #CCC;
+  padding: 10px 10px 10px 140px;
+  position: relative;
+}
+/* line 315, ../sass/live-player.scss */
+.singleBookmark .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+/* line 319, ../sass/live-player.scss */
+.singleBookmark .container-fluid img {
   display: block;
-  font-size: 10px;
+  background-color: #000;
   height: 70px;
-  padding: 45px 0 0 0;
-  text-align: center;
-  width: 162px;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  width: 120px;
+}
+/* line 329, ../sass/live-player.scss */
+.singleBookmark .container-fluid .duration {
+  background-color: #000;
+  color: #FFF;
+  font-size: 10px;
+  left: 15px;
+  padding: 0 2px;
+  position: absolute;
+  top: 60px;
+}
+/* line 339, ../sass/live-player.scss */
+.singleBookmark .container-fluid .title {
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+  margin: 0 0 5px 0;
+  padding: 0;
+}
+/* line 348, ../sass/live-player.scss */
+.singleBookmark .container-fluid .tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 353, ../sass/live-player.scss */
+.singleBookmark .container-fluid .tags li {
+  float: left;
+  /*
+  a:last-child:after {
+    content: '.';
+  }
+  */
+}
+/* line 356, ../sass/live-player.scss */
+.singleBookmark .container-fluid .tags li a {
+  font-size: 10px;
+}
+/* line 359, ../sass/live-player.scss */
+.singleBookmark .container-fluid .tags li a:after {
+  content: ", ";
+}
+/* line 370, ../sass/live-player.scss */
+.singleBookmark .container-fluid .time {
+  border-bottom: 1px solid #CCC;
+  border-top: 1px solid #CCC;
+  clear: both;
+}
+/* line 376, ../sass/live-player.scss */
+.singleBookmark .container-fluid #stats {
+  border-top: 1px solid #CCC;
+  clear: both;
+}
+/* line 382, ../sass/live-player.scss */
+.singleBookmark .container-fluid #stats li a {
+  border-radius: 0;
+  color: #666;
+  font-size: 12px;
+  padding: 5px 10px;
 }
 
 /* [06.MOBILE MENU BAR] */
-/* line 254, ../sass/live-player.scss */
+/* line 394, ../sass/live-player.scss */
 #mobileMenuBar {
   background-color: #F5F5F5;
   border-bottom: #CCC solid 1px;
@@ -248,79 +401,39 @@ h1 {
   position: relative;
   text-align: center;
 }
-/* line 264, ../sass/live-player.scss */
+/* line 404, ../sass/live-player.scss */
 #mobileMenuBar h5 {
   display: block;
   margin: 0 0 2px;
   padding: 0;
 }
-/* line 270, ../sass/live-player.scss */
+/* line 410, ../sass/live-player.scss */
 #mobileMenuBar ol {
   position: relative;
   bottom: 3px;
 }
-/* line 274, ../sass/live-player.scss */
+/* line 414, ../sass/live-player.scss */
 #mobileMenuBar ol li {
   background-color: transparent;
   border: 1px solid #999;
 }
-/* line 278, ../sass/live-player.scss */
+/* line 418, ../sass/live-player.scss */
 #mobileMenuBar ol li.active {
   background-color: #CCC;
 }
 
-/* [07.MOBILE FOOTER MENU] */
-/* line 285, ../sass/live-player.scss */
-#mobileFooterMenu {
-  background-color: #FFF;
-  bottom: 0;
-  border-top: 1px solid #B2B2B2;
-  height: 50px;
-  padding: 0;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-}
-/* line 295, ../sass/live-player.scss */
-#mobileFooterMenu a {
-  color: #656565;
-  display: block;
-  height: 50px;
-  padding: 10px 0;
-}
-/* line 301, ../sass/live-player.scss */
-#mobileFooterMenu a span {
-  display: block;
-}
-/* line 305, ../sass/live-player.scss */
-#mobileFooterMenu a.active {
-  background-color: #EEE;
-  color: #58AEEF;
-}
-
 /* ---------------------------------- +/
-TABLET (PORTRAIT)
-Greater than 768px
-
-00.GLOBAL
-01.MAIN NAVIGATION
-02.PLAYER CONTAINER
-03.MENU BAR
-04.SUB MENU BAR
-05.BOOKMARK GRID
-06.MOBILE MENU BAR
-07.MOBILE FOOTER MENU
-
+02. TABLET (Greater than 768px)
 /+ ---------------------------------- */
 @media (min-width: 768px) {
-  /* [00.GLOBAL] */
-  /* line 332, ../sass/live-player.scss */
+  /* [A] Global */
+  /* line 433, ../sass/live-player.scss */
   body {
-    margin: 52px 0 0;
+    margin: 51px 0 50px 0;
   }
 
-  /* [01.MAIN NAVIGATION] */
-  /* line 337, ../sass/live-player.scss */
+  /* [B] Main Navigation */
+  /* line 438, ../sass/live-player.scss */
   #mainNavigation {
     border-bottom: 1px solid #CCC;
     border-radius: 0;
@@ -328,29 +441,39 @@ Greater than 768px
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 101;
   }
-  /* line 346, ../sass/live-player.scss */
+  /* line 447, ../sass/live-player.scss */
   #mainNavigation .container-fluid {
     background-color: transparent;
-    /* [AA.BRAND] */
-    /* [BB.VIDEO TITLE] */
-    /* [CC.PROFILE DROPDOWN] */
+    /* [B.01] Brand */
+    /* [B.02] Video Title */
+    /* [B.03] Profile Dropdown */
   }
-  /* line 350, ../sass/live-player.scss */
+  /* line 451, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavBrand {
     width: inherit;
   }
-  /* line 355, ../sass/live-player.scss */
+  /* line 456, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavDropDown {
     display: block;
   }
-  /* line 360, ../sass/live-player.scss */
+  /* line 461, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown {
     display: block;
   }
 
-  /* line 366, ../sass/live-player.scss */
+  /* [C] Player Container */
+  /* line 468, ../sass/live-player.scss */
+  #playerContainer {
+    left: 0px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  /* line 476, ../sass/live-player.scss */
   #playerContainer.vidFixedPosition {
     bottom: 10px;
     display: block;
@@ -361,81 +484,19 @@ Greater than 768px
     z-index: 100;
   }
 
-  /* [03.MENU BAR] */
-  /* line 377, ../sass/live-player.scss */
-  #menuBar {
-    background-color: #F5F5F5;
-    border-bottom: 1px solid #E5E5E5;
-    box-shadow: 0px 3px 10px #CCC;
+  /* [D] Title Block */
+  /* line 489, ../sass/live-player.scss */
+  #titleBlock .col-md-8 {
     display: block;
-    position: relative;
-    z-index: 20;
-  }
-  /* line 388, ../sass/live-player.scss */
-  #menuBar .container-fluid .nav li a {
-    color: #666;
-  }
-  /* line 393, ../sass/live-player.scss */
-  #menuBar .container-fluid .nav li.active a {
-    background-color: #666;
-    color: #FFF;
   }
 
-  /* [04.SUB MENU BAR] */
-  /* line 403, ../sass/live-player.scss */
-  #subMenuBar {
-    background-color: #E5E5E5;
-    display: block;
-    height: 50px;
-    margin-bottom: 15px;
-  }
-  /* line 409, ../sass/live-player.scss */
-  #subMenuBar .container-fluid {
-    padding-top: 10px;
-  }
-  /* line 412, ../sass/live-player.scss */
-  #subMenuBar .container-fluid ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* [05.BOOKMARK GRID] */
-  /* line 425, ../sass/live-player.scss */
-  #bookmarkGrid table thead {
-    display: table-header-group;
-  }
-  /* line 429, ../sass/live-player.scss */
-  #bookmarkGrid table thead tr th {
-    font-weight: normal;
-    white-space: nowrap;
-  }
-  /* line 437, ../sass/live-player.scss */
-  #bookmarkGrid table tbody tr th {
-    display: table-cell;
-    font-weight: normal;
-    vertical-align: inherit;
-    width: initial;
-  }
-  /* line 443, ../sass/live-player.scss */
-  #bookmarkGrid table tbody tr th img {
-    height: 70px;
-    width: initial;
-  }
-
-  /* [06.MOBILE MENU BAR] */
-  /* line 454, ../sass/live-player.scss */
-  #mobileMenuBar {
-    display: none;
-  }
-
-  /* [07.MOBILE FOOTER MENU] */
-  /* line 459, ../sass/live-player.scss */
-  #mobileFooterMenu {
+  /* [G] Mobile Footer */
+  /* line 505, ../sass/live-player.scss */
+  #mobileFooter {
     display: none;
   }
 }
-/* [end] min-width:960px) */
+/* [end] min-width:768px) */
 /* ---------------------------------- +/
 DESKTOP
 Greater than 960px
@@ -448,13 +509,13 @@ Greater than 960px
 /+ ---------------------------------- */
 @media (min-width: 960px) {
   /* [00.GLOBAL] */
-  /* line 479, ../sass/live-player.scss */
+  /* line 524, ../sass/live-player.scss */
   body {
     margin: 52px 0 0;
   }
 
   /* [01.MAIN NAVIGATION] */
-  /* line 484, ../sass/live-player.scss */
+  /* line 529, ../sass/live-player.scss */
   #mainNavigation {
     border-bottom: 1px solid #CCC;
     border-radius: 0;
@@ -464,17 +525,17 @@ Greater than 960px
     width: 100%;
     z-index: 100;
   }
-  /* line 493, ../sass/live-player.scss */
+  /* line 538, ../sass/live-player.scss */
   #mainNavigation .container-fluid {
     background-color: transparent;
     /* [AA.BRAND] */
     /* [BB.VIDEO TITLE] */
   }
-  /* line 499, ../sass/live-player.scss */
+  /* line 544, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavBrand img {
     height: 25px;
   }
-  /* line 505, ../sass/live-player.scss */
+  /* line 550, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavVidTitle {
     background-color: transparent;
     display: block !important;
@@ -484,7 +545,7 @@ Greater than 960px
     padding: 15px 0 0 15px;
     position: relative;
   }
-  /* line 514, ../sass/live-player.scss */
+  /* line 559, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavVidTitle #nowWatching {
     background-color: transparent;
     color: #000;
@@ -493,7 +554,7 @@ Greater than 960px
     top: 4px;
   }
 
-  /* line 525, ../sass/live-player.scss */
+  /* line 570, ../sass/live-player.scss */
   #playerContainer.fixedPosition {
     bottom: 10px;
     display: block;
@@ -505,7 +566,7 @@ Greater than 960px
   }
 
   /* [03.MOBILE FOOTER MENU] */
-  /* line 536, ../sass/live-player.scss */
+  /* line 581, ../sass/live-player.scss */
   #mobileFooterMenu {
     display: none;
   }
@@ -523,13 +584,13 @@ Greater than 1100px
 /+ ---------------------------------- */
 @media (min-width: 1200px) {
   /* [00.GLOBAL] */
-  /* line 556, ../sass/live-player.scss */
+  /* line 601, ../sass/live-player.scss */
   body {
     margin: 52px 0 0;
   }
 
   /* [01.MAIN NAVIGATION] */
-  /* line 561, ../sass/live-player.scss */
+  /* line 606, ../sass/live-player.scss */
   #mainNavigation {
     border-bottom: 1px solid #CCC;
     border-radius: 0;
@@ -539,25 +600,25 @@ Greater than 1100px
     width: 100%;
     z-index: 100;
   }
-  /* line 570, ../sass/live-player.scss */
+  /* line 615, ../sass/live-player.scss */
   #mainNavigation .container-fluid {
     background-color: transparent;
     /* [AA.BRAND] */
     /* [BB.BRAND] */
   }
-  /* line 576, ../sass/live-player.scss */
+  /* line 621, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavBrand img {
     height: 25px;
   }
-  /* line 584, ../sass/live-player.scss */
+  /* line 629, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown .videoTitle {
     font-size: 14px;
   }
-  /* line 590, ../sass/live-player.scss */
+  /* line 635, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-toggle {
     display: none;
   }
-  /* line 594, ../sass/live-player.scss */
+  /* line 639, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu {
     background-color: transparent;
     border: none;
@@ -569,11 +630,11 @@ Greater than 1100px
     padding: 8px 0;
     position: relative;
   }
-  /* line 605, ../sass/live-player.scss */
+  /* line 650, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li {
     float: left;
   }
-  /* line 608, ../sass/live-player.scss */
+  /* line 653, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li a {
     background-color: transparent;
     border-right: 1px solid #666;
@@ -582,18 +643,18 @@ Greater than 1100px
     margin: 0 3px;
     padding: 3px 5px;
   }
-  /* line 616, ../sass/live-player.scss */
+  /* line 661, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li a:hover {
     background-color: #FFF;
     background-image: none;
     color: #428BCA;
   }
-  /* line 625, ../sass/live-player.scss */
+  /* line 670, ../sass/live-player.scss */
   #mainNavigation .container-fluid #mainNavProfileDropDown .dropdown .dropdown-menu li:last-child a {
     border: none;
   }
 
-  /* line 637, ../sass/live-player.scss */
+  /* line 682, ../sass/live-player.scss */
   #playerContainer.vidFixedPosition {
     bottom: 10px;
     display: block;
@@ -605,7 +666,7 @@ Greater than 1100px
   }
 
   /* [03.MOBILE FOOTER MENU] */
-  /* line 648, ../sass/live-player.scss */
+  /* line 693, ../sass/live-player.scss */
   #mobileFooterMenu {
     display: none;
   }

@@ -1,4 +1,12 @@
 
+
+$(document).ready(function(){});/* [end] document.ready */
+
+
+$("#singlePlayerOptions").carousel({
+	interval: false
+})
+
 /* --------------------------- +/
 $(document).ready(function(e) {
 	alert('ready');    

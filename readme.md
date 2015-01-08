@@ -3,6 +3,22 @@ cd<h1>Washington</h1>
 <h2>Live Player</h2>
 <span>Prototype Documentation</span>
 
+<h3>Table Of Contents</h3>
+<ol>
+	<li>Global</li>
+	<li>Main Navigation</li>
+	<li>Player Container</li>
+	<li>Title Block</li>
+	<li>Desktop Player Menu</li>
+	<li>Info Panel Container</li>
+	<li>Mobile Footer</li>
+	<li>Single Video Navigation</li>
+	<li>Share Panel</li>
+	<li>Single Bookmark</li>
+</ol>
+
+
+
 <h3>HTML Structure</h3>
 <ul>
 	<li><strong>Meta</strong>: </li>

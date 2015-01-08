@@ -17,7 +17,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all"/>
 <link href="css/stylesheets/live-player.css" rel="stylesheet" type="text/css" media="all"/>
-<link href="css/stylesheets/demo-only.css" rel="stylesheet" type="text/css" media="all"/>
 
 <style type="text/css">
 

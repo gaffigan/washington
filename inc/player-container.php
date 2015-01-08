@@ -4,22 +4,15 @@ PLAYER CONTAINER
 Parent: "playerContainer"
 /+ ----------------------------- */
 ?>
+<!-- ++++++++++++++++++++++++++++++ /
+DEMO ONLY
+The following iframe is for demo purposes only. 
+/ +++++++++++++++++++++++++++++++ -->
 
-<div id="playerContainer" class="container-fluid">
+<div id="playerContainer" style="">
 
-	<div class="player">
-
-		<!-- ++++++++++++++++++++++++++++++ /
-		DEMO ONLY
-		The following iframe is for demo purposes only. 
-		/ +++++++++++++++++++++++++++++++ -->
-
-		<iframe class="embed-responsive-item" src="//www.youtube.com/embed/4Prc1UfuokY" frameborder="0" allowfullscreen></iframe>
+	<div class="embed-responsive embed-responsive-16by9">
+	  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/cdFIgYXHQQ8"></iframe>
+	</div><!-- /embed-responsive -->
 	
-	</div><!-- /player -->
-
-	<div class="placeHolder">
-		<h1><span class="glyphicon glyphicon-resize-full" aria-hidden="true"></span> Mini Player Activated</h1>
-	</div><!-- /.placeHolder -->
-
-</div><!-- /#playerContainer -->
+</div><!-- /playerContainer -->

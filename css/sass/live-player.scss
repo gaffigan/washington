@@ -1,29 +1,40 @@
 
 /* 
-LIVE PLAYER
+
+LIVE PLAYER PROTOTYPE
+
+================================
+MEDIA
+================================
+01. MOBILE (Less than 768px)
+02. TABLET (Greater than 768px)
+
+================================
+SECTIONS
+================================
+A. Global
+B. Main Navigation
+C. Player Container
+D. Title Block
+E. Desktop Player Menu
+F. Info Panel Container
+G. Mobile Footer 
+H. Single Video Navigation
+I. Share Panel
+J. Single Bookmark
+
 */
 
 /* ---------------------------------- +/
-MOBILE
-Less than 768px
-
-00.GLOBAL
-01.MAIN NAVIGATION
-02.PLAYER CONTAINER
-03.MENU BAR
-04.SUB MENU BAR
-05.BOOKMARK GRID
-06.MOBILE MENU BAR
-07.MOBILE FOOTER MENU
-
+01. MOBILE (Less than 768px)
 /+ ---------------------------------- */
 
-/* [00.GLOBAL] */ 
+/* [A] Global */ 
 body {
-	margin: 56px 0 0;
+	margin: 262px 0 50px 0;
 }
 
-/* [01.MAIN NAVIGATION] */ 
+/* [B] Main Navigation */ 
 #mainNavigation {
 	border-bottom: 1px solid #CCC;
 	border-left: none;
@@ -34,7 +45,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 100;
+	z-index: 101;
 
 	.container-fluid {
 		background-color: transparent;
@@ -65,186 +76,315 @@ body {
 	}
 }
 
-/* [02.PLAYER CONTAINER] */ 
+/* [C] Player Container */ 
 #playerContainer {
-	background-color: aquamarine;
-	padding-right: 0;
-	padding-left: 0;
-	position: relative;
-
-	.player {
-		position: relative;
-		z-index: 10;
-	}
-
-	.placeHolder {
-		background-color: #CCC;
-		min-height: 315px;
-		margin: 0;
-		padding: 215px 0 0;
-		text-align: center;
-		z-index: 0;s
-
-		h1 {
-			color: #999;
-			font-size: 24px;
-			margin: 0;
-		}
-	}
-}
-
-#playerContainer.vidFixedPosition {
-	bottom: 60px;
-	display: block;
-	height: 140px;
-	position: fixed;
-	right: 10px;
-	width: 70%;
+	left:0px;
+	position:fixed;
+	top:51px;
+	width: 100%;
 	z-index: 100;
 }
 
-
-
-
+/* [D] Title Block */ 
 #titleBlock {
-	/* background-color: darkcyan; */
-	background-color: transparent;
+	background-color: #FFF;
+	margin: 0;
 
 	.col-md-8 {
+		display: none;
 		font-size: 24px;
+		line-height: 24px;
+		padding-bottom: 15px;
+		padding-top: 15px;
 	}
 	.col-md-4 {
+
 		#shareButtons {
-			button {
-				background-color: transparent;
-				background-image: none;
-				border-radius: 0;
-				border: none;
-				text-shadow: none;
+			background-color: #F5F5F5;
+			border-bottom: 1px solid #EEE;
+			border-top: 1px solid #EEE;
+
+			.col-md-4 {
+				padding-right: 8px;
+				padding-left: 8px;
+
+				button {
+					background-color: transparent;
+					background-image: none;
+					border-radius: 0;
+					border: none;
+					border-color: transparent;
+					box-shadow: none;
+					text-shadow: none;
+					width: 100%;
+				}
 			}
 		}
 	}
 }
 
-
-
-
-/* [03.MENU BAR] */
-#menuBar {
+/* [E] Desktop Player Menu */ 
+#playerMenu {
 	display: none;
 }
 
-/* [04.SUB MENU BAR] */
-#subMenuBar {
-	display: none;
-}
+/* [F] Info Panel Container */ 
+#infoPanelContainer {
+	position: relative;
+	padding-top: 25px;
 
-/* [05.BOOKMARK GRID] */
-#bookmarkGrid {
-	table {
-		thead {
-			display: none;
+	/* [F.01] Carousel Indicators */ 
+	.carousel-indicators {
+		background-color: #f9f9f9;
+		border-bottom: 1px solid #EEE;
+		bottom: 0;
+		height: 25px;
+		left: 0;
+		margin-bottom: 0;
+		margin-left: 0;
+		padding: 3px;
+		position: absolute;
+		top: 0;
+		width: 100%;
 
-			tr {
-				th {
-					font-weight: normal;
-					white-space: nowrap;
+		li {
+			border: 1px solid #999;
+		}
+		.active {
+			background-color: #aad5fa;
+			border: 1px solid #999;
+		}
+	}
+
+	/* [F.02] Single Player Options */ 
+	#singlePlayerOptions {
+
+		.carousel-inner {
+
+			.item {
+
+				.optionPanel {
+					padding: 40px 0 0;
+
+					header {
+						background-color: transparent;
+						display: block;
+						left: 0;
+						margin: 0;
+						padding: 10px 0;
+						position: fixed;
+						text-align: center;
+						top: 0px;
+						width: 100%;
+						z-index: 100;
+						
+						h1 {
+							color: #666;
+							font-size: 18px;
+							margin: 0;
+						}
+						#leftOption {
+							left: 10px;
+							position: absolute;
+						}
+						#rightOption {
+							background-color: #F2F2F2;
+							border: 1px solid #EEE;
+							color: #AAA;
+							padding: 5px 10px;
+							position: absolute;
+							right: 10px;
+							top: 4px;
+						}
+					}
+
+					.individualPanel {
+						background-color: #EEEEEE;
+
+						.shareInfo {
+							padding: 0 10px 10px;
+
+							h2 {
+								border-bottom: 2px solid #FFF;
+								font-size: 18px;
+								font-weight: 400;
+								margin: 1px 0 10px;
+								padding: 10px 0 10px;
+							}
+
+							p {
+								font-size: 14px;
+							}
+						}
+					}
 				}
 			}
 		}
-		tbody {
-			tr {
-				th {
-					display: block;
-					font-weight: normal;
-					width: 100%;
+	}
 
-					img {
-						height: 160px;
-						width: initial;
-					}
-				}
+}
+
+/* [G] Mobile Footer */ 
+#mobileFooter {
+	background-color: #FFF;
+	bottom: 0;
+	border-top: 1px solid #B2B2B2;
+	height: 50px;
+	padding: 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+
+	.col-xs-3 {
+		padding-left: 5px;
+		padding-right: 5px;
+
+		a {
+			color: #656565;
+			display: block;
+			height: 50px;
+			padding: 10px 0;
+
+			span {
+				display: block;
 			}
+		}
+		a.active {
+			background-color: #EEE;
+			color: #58AEEF;
+		}
+	}
+}
 
-			/* [NEW BOOKMARK] */
-			.newBookMarkRow {
-				background-color: #F5F5F5;
+/* [H] Single Video Navigation */ 
+#singleVidNav {
+	display: none;
+}
 
-				.deleteBookmark {
-					background-color: #E5E5E5;
-					overflow: hidden;
-					position: relative;
+/* [I] Share Panel */ 
+#sharePanel {
+	background-color: #FFF;
+	border-bottom: 1px solid #CCC;
+	left: 0;
+	margin: 0 0 15px;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
 
-					#deleteContainer {
-						background-color: crimson;
-						height: 170px;
-						left: 0;
-						position: absolute;
-						top: 0;
-						width: 100%;
-						-webkit-transition: all 0.3s linear;
-						-moz-transition: all 0.3s linear;
-						-o-transition: all 0.3s linear;
-						transition: all 0.3s linear;
-					}
-					#deleteContainer:hover {
-						background-color: teal;
-						top: -85px;
-					}
+	.col-xs-4 {
+		border-right: 1px solid #CCC;
 
-					#delete {
-						a {
-							background-color: turquoise;
-							color: #CCC;
-							display: block;
-							text-align: center;
-						}
+		/* [I.01] Share Option */ 
+		.shareOption {
+			background-color: transparent;
+			color: #428bca;
+			display: block;
+			padding: 5px;
+			text-align: center;
+			text-decoration: none;
+		}
+		.active {
+			background-color: #616161;
+			color: #FFF;
+			
+			span {
+				color: #ee4c44;
+			}
+		}
 
-						span {
-							color: #CC0000;
-							display: block;
-							font-size: 10px;
-						}
-					}
+	}
+	.col-xs-4:nth-child(2) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
-					#confirmDelete {
-						background-color: #D30000;
-						color: #FFF;
-						height: 100%;
-						left: 0;
-						padding: 35px 0 0 0;
-						position: absolute;
-						text-align: center;
-						top: 0;
-						width: 100%;
-					}
-					#confirmDelete:hover {
-						opacity: .75;
-						text-decoration: none;
-					}
-				}
-				.image {
-					.tempImage {
-						background-color: #E5E5E5;
-						background-image: url(../../images/generating-image.gif);
-						background-position: 50% 30%;
-						background-repeat: no-repeat;
-						background-size: 25px;
-						border: 1px solid #CCC;
-						color: #999;
-						display: block;
+	.col-xs-4:last-child {
+		border-right: none;
+	}
+}
+
+/* [J] Share Panel */ 
+.singleBookmark {
+	background-color: transparent;
+	border-top: 1px solid #CCC;
+	padding: 10px 10px 10px 140px;
+	position: relative;
+
+	.container-fluid {
+		padding-right: 0;
+		padding-left: 0;
+
+		img {
+			display: block;
+			background-color: #000;
+			height: 70px;
+			left: 10px;
+			position: absolute;
+			top: 10px;
+			width: 120px;
+		}
+
+		.duration {
+			background-color: #000;
+			color: #FFF;
+			font-size: 10px;
+			left: 15px;
+			padding: 0 2px;
+			position: absolute;
+			top: 60px;
+		}
+
+		.title {
+			background-color: transparent;
+			font-size: 14px;
+			font-weight: 300;
+			display: block;
+			margin: 0 0 5px 0;
+			padding: 0;
+		}
+
+		.tags {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				float:left;
+
+					a {
 						font-size: 10px;
-						height: 70px;
-						padding: 45px 0 0 0;
-						text-align: center;
-						width: 162px;
 					}
+					a:after {
+						content: ", ";
+					}
+					/*
+					a:last-child:after {
+					  content: '.';
+					}
+					*/
+			}
+		}
+
+		.time {
+			border-bottom:1px solid #CCC;
+			border-top:1px solid #CCC;
+			clear: both;
+		}
+
+		#stats {
+			border-top: 1px solid #CCC;
+			clear: both;
+
+			li {
+
+				a {
+					border-radius: 0;
+					color: #666;
+					font-size: 12px;
+					padding: 5px 10px;
 				}
-				.title {}
-				.startTime {}
-				.endTime {}
-				.duration {}
-				.tags {}
 			}
 		}
 	}
@@ -281,59 +421,20 @@ body {
 	}
 }
 
-/* [07.MOBILE FOOTER MENU] */
-#mobileFooterMenu {
-	background-color: #FFF;
-	bottom: 0;
-	border-top: 1px solid #B2B2B2;
-	height: 50px;
-	padding: 0;
-	position: fixed;
-	text-align: center;
-	width: 100%;
-
-	a {
-		color: #656565;
-		display: block;
-		height: 50px;
-		padding: 10px 0;
-
-		span {
-			display: block;
-		}
-	}
-	a.active {
-		background-color: #EEE;
-		color: #58AEEF;
-	}
-}
-
-
 
 
 
 /* ---------------------------------- +/
-TABLET (PORTRAIT)
-Greater than 768px
-
-00.GLOBAL
-01.MAIN NAVIGATION
-02.PLAYER CONTAINER
-03.MENU BAR
-04.SUB MENU BAR
-05.BOOKMARK GRID
-06.MOBILE MENU BAR
-07.MOBILE FOOTER MENU
-
+02. TABLET (Greater than 768px)
 /+ ---------------------------------- */
 @media (min-width:768px){
 
-	/* [00.GLOBAL] */ 
+	/* [A] Global */ 
 	body {
-		margin: 52px 0 0;
+		margin: 51px 0 50px 0;
 	}
 
-	/* [01.MAIN NAVIGATION] */ 
+	/* [B] Main Navigation */ 
 	#mainNavigation {
 		border-bottom: 1px solid #CCC;
 		border-radius: 0;
@@ -341,26 +442,35 @@ Greater than 768px
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 100;
+		z-index: 101;
 
 		.container-fluid {
 			background-color: transparent;
 
-			/* [AA.BRAND] */ 
+			/* [B.01] Brand */ 
 			#mainNavBrand {
 				width: inherit;
 			}
 
-			/* [BB.VIDEO TITLE] */
+			/* [B.02] Video Title */ 
 			#mainNavDropDown {
 				display: block;
 			}
 
-			/* [CC.PROFILE DROPDOWN] */ 
+			/* [B.03] Profile Dropdown */ 
 			#mainNavProfileDropDown {
 				display: block;
 			}
 		}
+	}
+
+	/* [C] Player Container */
+	#playerContainer {
+		left:0px;
+		position:relative;
+		top:0;
+		width: 100%;
+		z-index: 100;
 	}
 
 	#playerContainer.vidFixedPosition {
@@ -373,94 +483,29 @@ Greater than 768px
 		z-index: 100;
 	}
 
-	/* [03.MENU BAR] */
-	#menuBar {
-		background-color: #F5F5F5;
-		border-bottom: 1px solid #E5E5E5;
-		box-shadow: 0px 3px 10px #CCC;
-		display: block;
-		position: relative;
-		z-index: 20;
+	/* [D] Title Block */ 
+	#titleBlock {
 
-		.container-fluid {
-			.nav {
-				li {
-					a {
-						color: #666;
-					}
-				}
-				li.active {
-					a {
-						background-color: #666;
-						color: #FFF;
-					}
+		.col-md-8 {
+			display: block;
+		}
+		.col-md-4 {
+
+			#shareButtons {
+
+				.col-md-4 {
+
+					button {}
 				}
 			}
 		}
 	}
 
-	/* [04.SUB MENU BAR] */
-	#subMenuBar {
-		background-color: #E5E5E5;
-		display: block;
-		height: 50px;
-		margin-bottom: 15px;
-
-		.container-fluid {
-			padding-top: 10px;
-
-			ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-
-				li {}
-			}
-		}
-	}
-
-	/* [05.BOOKMARK GRID] */
-	#bookmarkGrid {
-		table {
-			thead {
-				display:table-header-group;
-
-				tr {
-					th {
-						font-weight: normal;
-						white-space: nowrap;
-					}
-				}
-			}
-			tbody {
-				tr {
-					th {
-						display: table-cell;
-						font-weight: normal;
-						vertical-align: inherit;
-						width: initial;
-
-						img {
-							height: 70px;
-							width: initial;
-						}
-					}
-				}
-			}
-		}
-	}
-
-	/* [06.MOBILE MENU BAR] */
-	#mobileMenuBar {
+	/* [G] Mobile Footer */ 
+	#mobileFooter {
 		display: none;
 	}
-
-	/* [07.MOBILE FOOTER MENU] */
-	#mobileFooterMenu {
-		display: none;
-	}
-
-}/* [end] min-width:960px) */
+}/* [end] min-width:768px) */
 
 
 /* ---------------------------------- +/
